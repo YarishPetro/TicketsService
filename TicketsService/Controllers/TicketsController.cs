@@ -17,7 +17,7 @@ namespace TicketsService.Controllers
         }
 
         [HttpPost]
-        public void CreateTicket([FromUri]Ticket ticket)
+        public void CreateTicket([FromBody]Ticket ticket)
         {
             db.Tickets.Add(ticket);
             db.SaveChanges();
